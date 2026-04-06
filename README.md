@@ -4,7 +4,7 @@
   <p><strong>Centralized Multi-Page Architecture & Real-Time Decision Interfaces</strong></p>
   
   <p>
-    <a href="LINK_DE_TU_APP_EN_STREAMLIT" target="_blank">
+    <a href="[https://ml-deployment-web-app-sdxdukod5bdlv2hqogitqz.streamlit.app/" target="_blank">
       <img src="https://img.shields.io/badge/Streamlit-Live_App-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white" />
     </a>
     <a href="https://github.com/thayss-tech" target="_blank">
@@ -154,7 +154,7 @@ The predictive ecosystem is deployed via Streamlit Community Cloud, utilizing:
 
 | Type | Link |
 | :--- | :--- |
-| **🌐 Live App** | [https://LINK_DE_TU_APP_EN_STREAMLIT](https://LINK_DE_TU_APP_EN_STREAMLIT) |
+| **🌐 Live App** | [https://ml-deployment-web-app-sdxdukod5bdlv2hqogitqz.streamlit.app/](https://ml-deployment-web-app-sdxdukod5bdlv2hqogitqz.streamlit.app/) |
 
 ---
 
@@ -164,8 +164,10 @@ The predictive ecosystem is deployed via Streamlit Community Cloud, utilizing:
 
 | Platform | Profile | Action |
 | :--- | :--- | :--- |
-| **LinkedIn** | Milton Mamani | [View Profile](https://www.linkedin.com/in/milton-mamani-1369a537b) |
-| **GitHub** | thayss-tech | [Explore Repos](https://github.com/thayss-tech) |
+| **🌐 Portfolio** | My Personal Website | [Visit Website](https://thayss-tech.github.io/PROFESSIONAL-WEBSITE/) |
+| **💼 LinkedIn** | Milton Mamani | [View Profile](https://www.linkedin.com/in/milton-mamani-1369a537b) |
+| **💻 GitHub** | thayss-tech | [Explore Repos](https://github.com/thayss-tech) |
+| **📧 Email** | Contact Me | [Send Message](mailto:miltonmau14@gmail.com) |
 
 <br />
 
