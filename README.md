@@ -1,95 +1,184 @@
-# 🚀 AI Financial Solutions Hub
+<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.31.0-FF4B4B.svg)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.4.0-F7931E.svg)
-![Pandas](https://img.shields.io/badge/Pandas-2.2.0-150458.svg)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Predictive%20Modeling-success)
+<br />
+  <h1>💰 Credit Risk Predictor: End-to-End ML Pipeline</h1>
+  <p><strong>Predictive Modeling & Real-Time Decision Interface</strong></p>
 
-**Author:** Thayss-tech  
-**Live Application:** [🔗 Access the Financial Hub here](LINK_DE_TU_APP_EN_STREAMLIT) *(Note: Replace with your actual Streamlit link)*
+<p>
+  <a href="https://credit-risk-model-brdvrp5bbgmdfjtxnyzgcs.streamlit.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Streamlit-Live_App-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white" />
+  </a>
 
----
+  <a href="https://github.com/thayss-tech" target="_blank">
+    <img src="https://img.shields.io/badge/Machine_Learning-Production_Ready-informational?style=for-the-badge&logo=python&logoColor=white" />
+  </a>
+</p>
 
-## 📌 Project Overview
+<p>
+  <a href="https://pandas.pydata.org/" target="_blank">
+    <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" />
+  </a>
 
-The **AI Financial Solutions Hub** is a centralized, multi-page web application designed to deploy and showcase enterprise-level Machine Learning models for the financial sector. Built with Streamlit, this hub serves as an interactive portfolio demonstrating end-to-end data science capabilities, from complex data preprocessing and model training to cloud deployment.
+  <a href="https://scikit-learn.org/" target="_blank">
+    <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" />
+  </a>
 
-The hub currently features two specialized predictive models:
+  <a href="https://xgboost.readthedocs.io/" target="_blank">
+    <img src="https://img.shields.io/badge/XGBoost-000000?style=flat-square&logo=xgboost&logoColor=white" />
+  </a>
 
-### 1. 🛡️ Fraud Guard (Real-Time Transaction Screening)
-A robust classification pipeline engineered to detect fraudulent activities in mobile money transactions. 
-* **Challenge:** Dealing with extreme class imbalance (only 0.3% of transactions were actual fraud).
-* **Solution:** Implemented advanced algorithmic weighting, data scaling, and a comprehensive Scikit-Learn `Pipeline` to ensure high recall without sacrificing precision.
-* **Key Features:** Real-time prediction interface, automated feature scaling, and probability confidence scoring.
+  <a href="https://streamlit.io/" target="_blank">
+    <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" />
+  </a>
+</p>
 
-### 2. 💰 Credit Risk Predictor (Applicant Default Evaluation)
-A predictive decision-support tool that evaluates retail banking applicants to forecast credit default risk.
-* **Algorithm:** Powered by an `ExtraTreesClassifier`.
-* **Engineering:** Features customized categorical encoding for variables such as Sex, Housing, and Account Status, mapped precisely from historical financial datasets.
-* **Key Features:** Dynamic UI, categorized risk assessment (Good/Bad Risk), and automated input transformation.
-
----
-
-## 🏗️ Architecture & Tech Stack
-
-This project adopts a modular, multi-page architecture, allowing seamless navigation between different machine learning solutions while sharing a unified server environment.
-* **Frontend & Web Framework:** Streamlit
-* **Data Manipulation:** Pandas, NumPy
-* **Machine Learning:** Scikit-Learn (Pipelines, ExtraTrees, Preprocessing)
-* **Model Serialization:** Joblib
-* **Deployment:** Streamlit Community Cloud
+</div>
 
 ---
 
-## 📁 Repository Structure
+## 📑 Table of Contents
+
+| Section | Description |
+| :--- | :--- |
+| [**💡 Overview**](#overview) | Project mission and business context. |
+| [**📈 Business Impact**](#business-impact) | The real-world value of this predictive model. |
+| [**🏗️ Architecture**](#architecture) | Technical flow from Data to Live Prediction. |
+| [**🧪 Modeling Strategy**](#modeling-strategy) | Algorithm tournament and optimization logic. |
+| [**⚙️ Technical Engine**](#technical-engine) | Breakdown of the production-ready assets. |
+| [**🗺️ Repository Map**](#repository-map) | Directory tree visualization. |
+| [**🎮 How to Use the App**](#how-to-use) | A quick guide for everyday users. |
+| [**🚀 Deployment**](#deployment) | Live access information. |
+| [**📩 Contact**](#contact) | Professional links. |
+
+---
+
+## <a id="overview"></a>💡 Overview
+
+Assessing credit risk is a cornerstone of retail banking. This project implements a supervised machine learning solution to predict whether a borrower represents a **'Good'** or **'Bad'** credit risk using the German Credit Dataset.
+
+The core development objective is to provide a **conservative risk evaluation tool** that prioritizes data certainty (Complete-Case Analysis) to minimize potential bank defaults while maintaining a streamlined approval process.
+
+> 🧑‍💻 **Curious about the technical deep dive?** > I highly encourage you to check out the **[`analysis_model.ipynb`](analysis_model.ipynb)** notebook! Inside, you will find the complete behind-the-scenes journey: from the Exploratory Data Analysis (EDA) and rigorous data cleaning, to the exact rationale behind every feature engineering decision and the comprehensive model tournament.
+
+---
+
+## <a id="business-impact"></a>📈 Business Impact
+
+By transitioning from basic human interpretation or simple heuristic models to this Extra Trees classifier, the system **increases predictive capability by nearly 10 percentage points**. 
+
+In a real-world retail banking scenario, a 10% increase in accurately identifying credit risk translates directly into **millions of dollars saved** from avoided defaults, while safely expanding the portfolio of reliable borrowers.
+
+---
+
+## <a id="architecture"></a>🏗️ Architectural Model
+
+The system is designed as a modular pipeline that connects exploratory data science with a production-grade interface.
+
+### Operational Flow
+
+```mermaid
+graph TD
+    A[📊 German Credit Data] --> B[📓 Jupyter Notebook: EDA & Training]
+    B -- Feature Engineering --> C[📦 Saved Encoders .pkl]
+    B -- Model Selection --> D[🧠 Extra Trees Model .pkl]
+    C & D --> E[🌐 Streamlit Web App]
+    E -- User Input --> F{🔮 Prediction Engine}
+    F -- Result --> G[✅/❌ Risk Decision Output]
+```
+
+#### Engineering Principles
+
+  * **⚡ Efficiency:** Minimalist feature set (9 key predictors including Age, Purpose, Housing, and Account Details) for fast real-time inference.
+  * **🛡️ Robustness:** Strict handling of categorical variables through persistent LabelEncoders exported via `joblib`.
+  * **📊 Transparency:** Probability-based outputs (`predict_proba`) instead of simple binary classification.
+
+---
+
+## <a id="modeling-strategy"></a>🧪 Modeling Strategy
+
+The analysis followed a rigorous methodology to identify the most stable classifier:
+
+1.  **Data Quality:** Applied **Complete-Case Analysis**, focusing exclusively on fully verified financial profiles and discarding incomplete records (like missing core bank account data) to avoid unverified assumptions.
+2.  **Imbalance Management:** Implemented `scale_pos_weight` and `class_weight='balanced'` to handle the natural scarcity of 'Bad Risk' cases in banking data.
+3.  **Algorithm Tournament:** Evaluated multiple models including Decision Trees (58.1%), Random Forest (61.9%), and XGBoost (67.6%).
+4.  **The Winner (Extra Trees):** Selected for its superior generalization capability (64.8% Accuracy) and stability across unseen data.
+5.  **Hyperparameter Tuning:** Executed **GridSearchCV with 5-Fold Cross-Validation** to optimize depth, estimators, and split criteria.
+
+---
+
+## <a id="technical-engine"></a>⚙️ Technical Engine: `Production Assets`
+
+The system relies on serialized components to ensure consistency between the training environment and the live app:
+
+| Subsystem | Icon | Component | Purpose |
+| :--- | :---: | :--- | :--- |
+| **Model Core** | 🧠 | `extra_trees_credit_model.pkl` | The trained decision engine. |
+| **Data Translation** | 🔠 | `*_encoder.pkl` | Persistent LabelEncoders for all categorical features. |
+| **Interface Layer** | 💻 | `app.py` | Streamlit logic and UI handling. |
+| **Dependency Map** | 📋 | `requirements.txt` | Environment specification for cloud deployment. |
+
+---
+
+## <a id="repository-map"></a>🗺️ Repository Map
 
 ```text
-ML-Deployment-Hub/
- ┣ 📄 app.py                           # Main landing page and UI configuration
- ┣ 📂 pages/                           # Streamlit multi-page directory
- ┃ ┣ 📄 1_🛡️_Fraud_Guard.py           # Fraud detection app logic
- ┃ ┗ 📄 2_💰_Credit_Risk.py            # Credit risk evaluation app logic
- ┣ 📦 fraud_detection_pipeline.pkl     # Serialized Fraud Pipeline (Model + Scaler)
- ┣ 📦 extra_trees_credit_model.pkl     # Serialized Credit Risk Model
- ┣ 📦 *_encoder.pkl                    # Various categorical encoders for Credit Risk
- ┣ 🖼️ logo c.png                       # UI Branding assets
- ┣ 📋 requirements.txt                 # Environment dependencies
- ┗ 📄 README.md                        # Project documentation
+CREDIT RISK MODEL FINAL/
+ ┃
+ ┣ 📄 analysis_model.ipynb         # Main notebook: EDA, data cleaning, model training and evaluation
+ ┣ 📄 app.py                       # Source code of the web interface built with Streamlit
+ ┣ 📦 extra_trees_credit_model.pkl # Best-performing model (Extra Trees) trained and serialized
+ ┃
+ ┣ 📄 Checking_account_encoder.pkl # Exported dictionary to encode checking account status
+ ┣ 📄 Housing_encoder.pkl          # Exported dictionary to encode housing status
+ ┣ 📄 Saving_accounts_encoder.pkl  # Exported dictionary to encode savings account status
+ ┣ 📄 Sex_encoder.pkl              # Exported dictionary to encode the 'Sex' variable into numeric format
+ ┣ 📄 target_encoder.pkl           # Exported dictionary to encode the target variable (Risk)
+ ┃
+ ┣ 📊 german_credit_data.csv       # Original (raw) dataset containing financial records
+ ┣ 📊 german_credit_data_clean.csv # Processed/cleaned dataset after Complete-Case Analysis
+ ┃
+ ┣ 📋 requirements.txt             # Python dependencies required for cloud deployment
+ ┗ 📄 README.md                    # Technical and business documentation of the project (this file)
 ```
 
 ---
 
-## 💻 How to Run Locally
+## <a id="how-to-use"></a>🎮 How to Use the App
 
-If you want to clone this repository and run the Financial Hub on your local machine:
+You don't need to be a data scientist to use this tool! Here is how you can evaluate a credit profile in seconds:
 
-1. **Clone the repository:**
-```bash
-git clone [https://github.com/TU_USUARIO/ML-Deployment-Web-App.git](https://github.com/TU_USUARIO/ML-Deployment-Web-App.git)
-cd ML-Deployment-Web-App
-```
-
-2. **Create a virtual environment (Recommended):**
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
-```
-
-3. **Install the required dependencies:**
-```bash
-pip install -r requirements.txt
-```
-
-4. **Launch the Streamlit App:**
-```bash
-streamlit run app.py
-```
-
-*The application will automatically open in your default web browser at http://localhost:8501.*
+1. **Open the Web App:** Click on the [Live App link](#deployment) below.
+2. **Enter Applicant Data (Left Sidebar):** Navigate to the **"Applicant Data"** menu on the left side of the screen. Use the intuitive sliders and dropdown menus to input the client's financial and demographic details (e.g., Age, Sex, Job, Credit Amount, Account balances).
+3. **View the Assessment (Main Panel):** As you input the data, the main dashboard will process the profile and instantly display the Risk Assessment verdict: either a **Good Risk ✅** or a **Bad Risk ❌**.
+4. **Check the Confidence Level:** Right below the verdict, you will see a progress bar indicating the exact **Confidence Level** (e.g., 87.00%), showing exactly how certain the AI model is about its decision.
 
 ---
 
-## 🤝 Let's Connect
+## <a id="deployment"></a>🚀 Deployment
 
-Looking for a Data Scientist or Machine Learning Engineer who understands both the algorithms and the deployment infrastructure? Feel free to reach out to discuss data strategies, cloud architecture, or potential opportunities.
+The predictive engine is deployed via **Streamlit Community Cloud**, utilizing:
+
+  * **Encrypted HTTPS communication.**
+  * **Automated resource caching (`@st.cache_resource`)** for instant model loading.
+  * **Continuous Deployment** directly from the GitHub repository.
+
+| Type | Link |
+| :--- | :--- |
+| **🌐 Live App** | [https://credit-risk-model-brdvrp5bbgmdfjtxnyzgcs.streamlit.app/](https://credit-risk-model-brdvrp5bbgmdfjtxnyzgcs.streamlit.app/) |
+
+---
+
+## <a id="contact"></a>📩 Contact
+
+<div align="center">
+
+| Platform | Profile | Action |
+| :--- | :--- | :--- |
+| **LinkedIn** | Milton Mamani | [View Profile](https://www.linkedin.com/in/milton-mamani-1369a537b) |
+| **GitHub** | thayss-tech | [Explore Repos](https://github.com/thayss-tech) |
+
+<br />
+
+> *Engineered with precision as a structured technical gateway for risk-sensitive environments.*
+
+</div>
