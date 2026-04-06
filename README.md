@@ -4,7 +4,7 @@
   <p><strong>Centralized Multi-Page Architecture & Real-Time Decision Interfaces</strong></p>
   
   <p>
-    <a href="[https://ml-deployment-web-app-sdxdukod5bdlv2hqogitqz.streamlit.app/" target="_blank">
+    <a href="https://ml-deployment-web-app-sdxdukod5bdlv2hqogitqz.streamlit.app/" target="_blank">
       <img src="https://img.shields.io/badge/Streamlit-Live_App-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white" />
     </a>
     <a href="https://github.com/thayss-tech" target="_blank">
